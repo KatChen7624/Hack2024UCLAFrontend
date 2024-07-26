@@ -1,38 +1,304 @@
-.App {
-  text-align: center;
-}
+/*HeroSection Starts*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+
+
+ 
+
+  
+  .control--container, .hero-container, .team-container {
+    
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+  }
+
+  .team-container > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+
+
+
+   .hero-container > h, .team-container > h {
+    color: #e2c57bb3;
+    font-size: 80px;
+    margin-top: -100px;
+    font-family: "Playwrite BE VLG", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+  }
+
+
+  .team-container > h {
+    color: lightpink;
+    opacity: 0.7;
+    margin-top: 50px;
+  }
+  
+  .hero-container > p{
+    margin-top: 8px;
+    color: #d5af4fb3;
+    font-size: 32px;
+    font-family: 'Arial';
+  } 
+  .team-container > p{
+    margin-top: 8px;
+    font-size: 50px;
+    font-family: "Sevillana", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color:rgb(220, 142, 195)
+  }
+
+
+
+
+  .team-container > h:hover{
+    transform: scale(1.03);
+  }
+
+
+
+  /*HeroSection ends*/
+
+  
+
+  /*Navbar starts here*/
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #897747;
+    box-shadow: 0px 5px 80px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+
+  .teamlogo > img {
+    width: 50px;
+    border-radius:25px ;
+  }
+
+  .navbar--items > ul {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 42.667px;
+    text-decoration: none;
+    margin-right: 100px;
+  }
+  .navbar--items ul > li > a {
+    text-decoration: none;
+  }
+  /* Navbar Content */
+  .navbar--content {
+    color: black;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+  }
+  .navbar--active-content {
+    color: rgb(236, 40, 40);
+  }
+
+
+  /*Navbar ends*/
+
+
+  .nav__hamburger {
+    display: none;
+    width: 1.875rem;
+    height: 1.313rem;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+  
+  .nav__hamburger__line {
+    display: block;
+    height: 0.188rem;
+    width: 100%;
+    background-color: #4b390b;
+    border-radius: 0.625rem;
+    transition: all ease-in-out 0.2s;
+  }
+
+
+  
+@media screen and (max-width: 1200px) {
+  .nav__hamburger {
+    display: flex;
+    z-index: 200;
+  }
+  .navbar--items {
+    display: flex;
+  }
+  .navbar--items {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #897747;
+    top: -20rem;
+    left: 0;
+    width: 100%;
+    opacity: 0.85;
+    transition: all ease-in-out 0.4s;
+  }
+  .navbar--items ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 0 0.6rem;
+    z-index: -100;
+  }
+  .navbar--items ul li {
+    text-align: center;
+  }
+  .navbar--items ul li a {
+    padding: 0.5rem;
+  }
+  .navbar--items {
+    z-index: -1000;
+  }
+  .navbar--items.active {
+    top: 30px;
+  }
+  .nav__hamburger.active :nth-child(1) {
+    transform: rotate(45deg) translate(0.45rem, 0.1875rem);
+  }
+
+  .nav__hamburger.active :nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav__hamburger.active :nth-child(3) {
+    transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Responsive Screens Ends*/
+
+
+
+/*Team section starts*/
+
+.teams--section {
   display: flex;
+  padding: 149.33px 85.33px;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  gap: 106.667px;
+}
+.teams--section--container {
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 42.6px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+.teams--section--card {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  flex: 1 0 0;
+  border-radius: 10.6px; 
+  min-height: 250px;
+  background-color: rgba(167, 118, 61,0.5);
+  border-top: 4px solid rgba(211, 183, 150, 0.8);
+}
+.teams--section--card:hover {
+  border-bottom: 2px solid rgba(211, 183, 150, 0.8);
+}
+.teams--section--card:hover .team--section--description {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.teams--section--card > img {
+  width: 100px;
+  height: 135px;
+  padding: 13.3px;
+  justify-content: center;
+  align-items: center;
+  gap: 13.3px;
+  border-radius: 40px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.teams--section--img {
+  /* display: flex; */
+  width: 20px;
+  height: auto;
+  /* height: auto;
+  padding: 13.3px;
+  justify-content: center;
+  align-items: center;
+  gap: 13.3px;
+  border-radius: 10.6px;
+  background: #fff;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1); */
 }
+.teams--section--card--content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  align-self: stretch;
+  font-family: "Playwrite BE VLG", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500; 
+  font-style: normal;
+
+} 
+
+
+/*Team section ends*/
+
+
+
+/*control starts*/
+
+
+.control--content > p{
+  
+  margin-top: 100px;
+}
+
+
+/*control end*/
+
+
