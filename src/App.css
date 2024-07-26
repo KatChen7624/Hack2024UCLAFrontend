@@ -47,6 +47,17 @@ video {
     font-style: normal;
   }
 
+  .meet--team > h{
+    color: lightpink;
+    opacity: 0.7;
+    margin-top: 50px;
+    font-size: 80px;
+    font-family: "Playwrite BE VLG", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+  }
+
 
   .team-container > h {
     color: lightpink;
@@ -76,6 +87,9 @@ video {
     transform: scale(1.03);
   }
 
+  .meet--team:hover{
+    transform: scale(1.03);
+  }
 
 
   /*HeroSection ends*/
