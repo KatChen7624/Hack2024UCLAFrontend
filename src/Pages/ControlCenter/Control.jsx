@@ -53,13 +53,13 @@ export default function ControlCenter(){
               <div className="control--main--container">
                 <div className="data-display-box">
                   <div><h>Live Data On Mars:</h></div>
-                  
+                  <br/>
                   <p>Temperatur: {data.temp}</p>
                   <p>Humidity: {data.humidity}</p>
                 </div>
                 <div className="control--robotics--container">
         
-                  <p style={{color:'#8e93d4',fontSize:'25px'}}>Control Options</p>
+                  <p style={{color:'#e4a3c5',fontSize:'50px',fontFamily: "monospace"}}>Control Options</p>
                   <Link 
                   className="rover"
                   spy={true}
@@ -68,25 +68,24 @@ export default function ControlCenter(){
                   duration={500}
                   to="Rover"
                    >
-                    <i style={{color:'#ffffff', fontSize: '30px',marginRight:'50px',marginLeft:'20px'}} class="fa-solid fa-car"></i>
-                    <span style={{color:'#849dab',fontSize:'30px',fontFamily:'fantasy'}}>
-                      Rover
-                    </span>
+                    <div>
+                      <i style={{color:'#ffffff', fontSize: '30px',marginRight:'50px'}} class="fa-solid fa-car"></i>
+                      <span style={{color:'#849dab',fontSize:'30px',fontFamily:'fantasy'}}>
+                        Rover
+                      </span>
+                    </div>
+                    
+                    <div>
+                      <i style={{color:'#ffffff', fontSize: '30px',marginRight:'50px'}} class="fa-solid fa-dharmachakra"></i>
+                      <span style={{color:'#849dab',fontSize:'30px',fontFamily:'fantasy'}}>
+                        Arm
+                      </span>
+                    </div>
+                    
                   </Link>
 
-                  <Link className="arm"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  to="Rover"
-                  
-                  >
-                    <i style={{color:'#ffffff', fontSize: '30px',marginRight:'50px'}} class="fa-solid fa-dharmachakra"></i>
-                    <span style={{color:'#849dab',fontSize:'30px',fontFamily:'fantasy'}}>
-                      Arm
-                    </span>
-                  </Link>
+
+                   
                   
                 </div>
               </div>

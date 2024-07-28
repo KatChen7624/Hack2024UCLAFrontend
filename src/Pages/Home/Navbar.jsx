@@ -91,6 +91,17 @@ export default function Navbar()
               AboutHack
             </Link>
           </li>
+
+          <li>
+            <Link
+              onClick={closeMenu}
+              activeClassName="navbar--active-content"
+              to="/test"
+              className="navbar--content"
+            >
+              test
+            </Link>
+          </li>
         
         </ul>
       </div>
