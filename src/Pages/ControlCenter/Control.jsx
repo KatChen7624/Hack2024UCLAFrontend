@@ -8,7 +8,7 @@ const socket = io('http://localhost:8000');
 export default function ControlCenter(){
     
     const [data, setData] = useState({"temp":10,"humidity":10}); 
-    const [ultradata,setUltradata]= useState({"front":10,  "back":10});
+    const [ultradata,setUltradata]= useState(10);
 
     useEffect(() => {
         // Listen for updates on the 'example_topic'
@@ -24,7 +24,7 @@ export default function ControlCenter(){
 
     useEffect(() => {
       socket.on('ultrasonic', (data) => {
-        setUltradata(JSON.parse(data)); // Update the state with the received data
+        setUltradata(data); // Update the state with the received data
       });
   
       return () => {
@@ -159,8 +159,8 @@ export default function ControlCenter(){
                   <div className="live--video--container">
                    <IframeComponent/>
                   </div>
-                  <p>Front distance: {ultradata.front}</p>
-                  <p>Back distance: {ultradata.back}</p>
+                  
+                  <p>Back distance: {ultradata}</p>
                 </div>
             </div>
 
