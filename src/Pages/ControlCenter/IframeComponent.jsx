@@ -12,10 +12,10 @@ function IframeComponent() {
     // }, []);
 
     return (
-        <div style={{padding:'100px'}}>
+        <div >
             <img
-            height="1240px" 
-            width="1240px" 
+            height="240px" 
+            width="400px" 
             src="http://10.0.0.73:81/stream"
             title="Example"
             />

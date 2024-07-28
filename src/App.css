@@ -416,30 +416,54 @@ video {
 
 /*control end*/
 
-/*test starts*/
+/*interaction starts*/
  
-.arrow--container{
+.arrow--container {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  padding: 33.333px 85.333px 133.333px;
+  padding: 20px 20px 20px;
   align-items: center;
   justify-content: center;
   gap: 30px;
   
 }
 
+.arrow2--container{
+  grid-template-columns: repeat(2, 1fr);
+  /* border: 2px solid white; */
+  display: grid;
+  padding: 20px 20px 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.arrow2--col{
+  display: grid;
+  grid-template-rows: repeat(2,1r);
+  align-items: center;
+  justify-content: center;
+
+}
+
+.arrow2--col > i{
+  color: white;
+}
+
 .arrow, .circle{
-  font-size: 120px;
+  font-size: 80px;
   box-shadow: 0 1px 2px 0 rgba(96, 124, 169, 0.95);
+  transition: opacity 0.25s;
 }
 
 .arm--arrow{
-  font-size: 120px;
+  font-size: 100px;
   color:white;
+  transition: opacity 0.25s;
   box-shadow: 0 1px 2px 0 rgba(96, 124, 169, 0.95);
 }
 .arm--arrow:hover{
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .arrow:hover, .circle:hover{
@@ -454,10 +478,34 @@ video {
 }
 
 #Rover{
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  flex-direction: co;
+  /* border: 2px solid white; */
  
 }
 
-/*test ends*/
+.interaction--container{
+  display: grid;
+  grid-template-columns: 4fr 3fr 5fr;
+  box-shadow: 0 -2px 0px 0 rgb(112, 107, 107);
+
+}
+
+.live--update--container{
+  padding: 30px 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.live--update--container > p{
+  color: var(--pink2);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}
+
+
+/*interaction ends*/
 

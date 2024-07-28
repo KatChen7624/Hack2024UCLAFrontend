@@ -1,13 +1,15 @@
 import io from 'socket.io-client';
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-scroll'
-
+import IframeComponent from './IframeComponent';
 
 const socket = io('http://localhost:8000'); 
 
 export default function ControlCenter(){
     
     const [data, setData] = useState({"temp":10,"humidity":10}); 
+
+
     useEffect(() => {
         // Listen for updates on the 'example_topic'
         socket.on('temp&&humidity', (data) => {
@@ -90,25 +92,60 @@ export default function ControlCenter(){
                 </div>
               </div>
             </div>
+            <div className="interaction--container">
+              <div id="Rover">    
+                <div className="arrow--container">
+                  <div className='rover--firstrow'>
+                    <a onClick={roverUp} className="arrow">⬆️</a>
+                  </div>
+                  <div>
+                    <a onClick={roverLeft} className="arrow">⬅️</a>
+                    <a onClick={roverStop} className="circle">🔵</a>
+                    <a onClick={roverRight} className="arrow">➡️</a>
+                  </div>
+                  <div className='rover--thirdrow'>
+                    <a onClick={roverDown} className="arrow">⬇️</a>
+                  </div>
+                </div>
 
-            <div id="Rover">
-              <p style={{color:'#ffffff'}}>Rover</p>
-              
-              <div className="arrow--container">
-                <div className='rover--firstrow'>
-                  <a onClick={roverUp} className="arrow">⬆️</a>
-                </div>
-                <div>
-                  <a onClick={roverLeft} className="arrow">⬅️</a>
-                  <a onClick={roverStop} className="circle">🔵</a>
-                  <a onClick={roverRight} className="arrow">➡️</a>
-                </div>
-                <div className='rover--thirdrow'>
-                  <a onClick={roverDown} className="arrow">⬇️</a>
-                </div>
+                
               </div>
+                <div className="arrow2--container">
+                    <div className="arrow2--col">
+                    <a  className="arm--arrow">⮝</a>
+                    <a  className="arm--arrow">⮟</a>
+                    </div>
+                    <div className="arrow2--col">
+                      <a  className="arm--arrow">🖐🏻</a>
+                      <a  className="arm--arrow">✊🏻</a>
+                    
+                    </div>
 
-              <div className="arrow--container">
+                </div>
+
+                <div className='live--update--container'>
+                  <div className="live--video--container">
+                   <IframeComponent/>
+                  </div>
+                  <p>Temperatur: {data.temp}</p>
+                  <p>Humidity: {data.humidity}</p>
+                </div>
+            </div>
+
+          
+            {/* 
+            <div>
+                
+                <button onClick={() => exampleSend('Hello, Server!')}>Send Message</button>
+               
+            </div> */}
+        </>
+
+    )
+}
+
+
+{/* <div className="arrow--container">
                 <div className='rover--firstrow'>
                   <a  className="arm--arrow">⮝</a>
                 </div>
@@ -120,19 +157,4 @@ export default function ControlCenter(){
                 <div className='rover--thirdrow'>
                   <a  className="arm--arrow">⮟</a>
                 </div>
-              </div>
-            </div>
-
-            <div>
-              <img src="http://10.0.0.73" alt="Cam 1"/>
-            </div>
-            {/* 
-            <div>
-                
-                <button onClick={() => exampleSend('Hello, Server!')}>Send Message</button>
-               
-            </div> */}
-        </>
-
-    )
-}
+              </div> */}
