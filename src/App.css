@@ -91,15 +91,17 @@ video {
   }
 
 
-
-
-  .team-container > h:hover{
-    transform: scale(1.03);
+  .meet--team{
+    transition: transform 0.5s;
   }
 
   .meet--team:hover{
-    transform: scale(1.03);
+    transform: scale(1.1);
   }
+
+
+
+
 
 
   /*HeroSection ends*/

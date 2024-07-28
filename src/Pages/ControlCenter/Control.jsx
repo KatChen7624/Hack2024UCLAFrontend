@@ -8,7 +8,7 @@ const socket = io('http://localhost:8000');
 export default function ControlCenter(){
     
     const [data, setData] = useState({"temp":10,"humidity":10}); 
-
+    const [ultradata,setUltradata]= useState({"front":10,  "back":10});
 
     useEffect(() => {
         // Listen for updates on the 'example_topic'
@@ -21,6 +21,21 @@ export default function ControlCenter(){
           socket.off('temp&&humidity');
         };
       }, []);
+
+    useEffect(() => {
+      socket.on('ultrasonic', (data) => {
+        setUltradata(JSON.parse(data)); // Update the state with the received data
+      });
+  
+      return () => {
+        socket.off('ultrasonic');
+      };
+    }, []);
+
+
+
+
+
       const exampleSend = (message) => {
         // Send a message through the socket to the 'example_topic'
         socket.emit('example_topic', message);
@@ -45,6 +60,23 @@ export default function ControlCenter(){
         socket.emit('send-direction','stop');
       }
       //arrow handle end
+
+      //arm handle start
+      const armMotionV = (msg) => {
+        return () => {
+            socket.emit('send-arm-value', msg);
+        };
+      };
+      
+      const armMotionOC = (msg) => {
+          return () => {
+              socket.emit('send-pinch-value', msg);
+          };
+      };
+
+     
+      //arm handle end
+
 
 
     return(
@@ -112,12 +144,12 @@ export default function ControlCenter(){
               </div>
                 <div className="arrow2--container">
                     <div className="arrow2--col">
-                    <a  className="arm--arrow">⮝</a>
-                    <a  className="arm--arrow">⮟</a>
+                    <a  onClick={armMotionV('armup')} className="arm--arrow">⮝</a>
+                    <a  onClick={armMotionV('armdown')} className="arm--arrow">⮟</a>
                     </div>
                     <div className="arrow2--col">
-                      <a  className="arm--arrow">🖐🏻</a>
-                      <a  className="arm--arrow">✊🏻</a>
+                      <a  onClick={armMotionOC('handopen')} className="arm--arrow">🖐🏻</a>
+                      <a  onClick={armMotionOC('handclose')} className="arm--arrow">✊🏻</a>
                     
                     </div>
 
@@ -127,8 +159,8 @@ export default function ControlCenter(){
                   <div className="live--video--container">
                    <IframeComponent/>
                   </div>
-                  <p>Temperatur: {data.temp}</p>
-                  <p>Humidity: {data.humidity}</p>
+                  <p>Front distance: {ultradata.front}</p>
+                  <p>Back distance: {ultradata.back}</p>
                 </div>
             </div>
 
