@@ -52,7 +52,8 @@ export default function ControlCenter(){
             
               <div className="control--main--container">
                 <div className="data-display-box">
-                  <h>Live Data On Mars:</h>
+                  <div><h>Live Data On Mars:</h></div>
+                  
                   <p>Temperatur: {data.temp}</p>
                   <p>Humidity: {data.humidity}</p>
                 </div>
@@ -96,18 +97,35 @@ export default function ControlCenter(){
               
               <div className="arrow--container">
                 <div className='rover--firstrow'>
-                  <a onClick={roverUp()} className="arrow">⬆️</a>
+                  <a onClick={roverUp} className="arrow">⬆️</a>
                 </div>
                 <div>
-                  <a onClick={roverLeft()} className="arrow">⬅️</a>
-                  <a onClick={roverStop()} className="circle">🔵</a>
-                  <a onClick={roverRight()} className="arrow">➡️</a>
+                  <a onClick={roverLeft} className="arrow">⬅️</a>
+                  <a onClick={roverStop} className="circle">🔵</a>
+                  <a onClick={roverRight} className="arrow">➡️</a>
                 </div>
                 <div className='rover--thirdrow'>
-                  <a onClick={roverDown()} className="arrow">⬇️</a>
+                  <a onClick={roverDown} className="arrow">⬇️</a>
                 </div>
               </div>
-               
+
+              <div className="arrow--container">
+                <div className='rover--firstrow'>
+                  <a  className="arm--arrow">⮝</a>
+                </div>
+                <div>
+                  <a  className="arm--arrow">⯇</a>
+                  <a className="circle">🟢</a>
+                  <a  className="arm--arrow">⯈</a>
+                </div>
+                <div className='rover--thirdrow'>
+                  <a  className="arm--arrow">⮟</a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <img src="http://10.0.0.73" alt="Cam 1"/>
             </div>
             {/* 
             <div>

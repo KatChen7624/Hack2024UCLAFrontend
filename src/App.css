@@ -48,7 +48,7 @@ video {
   }
 
   .meet--team > h{
-    color: lightpink;
+    color: #e4aec5;
     opacity: 0.7;
     margin-top: 50px;
     font-size: 80px;
@@ -102,7 +102,7 @@ video {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background: #897747;
+    background:  rgba(95, 116, 100, 0.5);
     box-shadow: 0px 5px 80px 0 rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -129,7 +129,7 @@ video {
   }
   /* Navbar Content */
   .navbar--content {
-    color: black;
+    color: #fad9e6;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -179,7 +179,7 @@ video {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #897747;
+    background-color: rgba(95, 116, 100, 0.5);
     top: -20rem;
     left: 0;
     width: 100%;
@@ -351,12 +351,19 @@ video {
   color:rgb(67, 203, 224);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin-left: 50px;
+  justify-content: center;
+  font-size: 20px;
  
 }
-.data-display-box > h{
+
+.data-display-box > div{
+  justify-content: center;
+}
+
+.data-display-box > div > h{
   color:rgb(168, 171, 208);
-  margin-bottom: 25px;
-  font-size: 25px;
+  margin-bottom: 50px;
+  font-size:25px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -400,6 +407,15 @@ video {
 .arrow, .circle{
   font-size: 120px;
   box-shadow: 0 1px 2px 0 rgba(96, 124, 169, 0.95);
+}
+
+.arm--arrow{
+  font-size: 120px;
+  color:white;
+  box-shadow: 0 1px 2px 0 rgba(96, 124, 169, 0.95);
+}
+.arm--arrow:hover{
+  opacity: 0.8;
 }
 
 .arrow:hover, .circle:hover{
