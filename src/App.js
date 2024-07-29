@@ -6,6 +6,7 @@ import Team from './Pages/Team';
 import Navbar from './Pages/Home/Navbar';
 import ControlCenter from './Pages/ControlCenter/Control';
 import IframeComponent from './Pages/ControlCenter/IframeComponent';
+import Chatbox from './Pages/ProjectDev.jsx/Chatbox';
 
 export default function App() {
   return (
@@ -16,8 +17,8 @@ export default function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/OurTeams" element={<Team/>}  ></Route>
           <Route path="/ControlCenter" element={<ControlCenter/>}></Route>
-          <Route path="/test" element=
-          {<IframeComponent/>}>
+          <Route path="/ProjectDev" element=
+          {<Chatbox/>}>
           </Route>
           <Route path="*" element={<div>404 Not Found</div>}></Route>
         </Routes>

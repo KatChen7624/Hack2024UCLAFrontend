@@ -96,10 +96,10 @@ export default function Navbar()
             <Link
               onClick={closeMenu}
               activeClassName="navbar--active-content"
-              to="/test"
+              to="/ProjectDev"
               className="navbar--content"
             >
-              test
+              ProjectDev
             </Link>
           </li>
         
