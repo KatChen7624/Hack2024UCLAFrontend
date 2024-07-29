@@ -16,9 +16,19 @@ function Chatbox() {
                 <img src="/images/chatbox.jpg"/>
             </div>
         </div>
-        
-       
 
+    </div>
+
+    <div className='dev--web--title--container'>
+        <h1>Gallery</h1>
+    </div>
+     <div id="gallery" style={{  paddingLeft:"125px", overflow: 'auto' }}>
+        <img
+          
+            src="/images/gallery.jpg"
+            width="100%"
+            alt="not found"
+        ></img>
     </div>
 
     <div className='dev--web--title--container'>
@@ -38,17 +48,27 @@ function Chatbox() {
     <div className='dev--web--title--container'>
         <h1>Pico&&Circuit Section</h1>
     </div>
-     <div id="circuitSection" style={{ height: '100vh', overflow: 'auto' }}>
+     <div id="circuitSection" style={{  paddingLeft:"125px",height: '100vh', overflow: 'auto' }}>
         <img
-            src="/images/Anna.jpg"
+          
+            src="/images/chatbox.jpg"
             width="100%"
             alt="not found"
         ></img>
     </div>
 
-    
+    <div className='dev--web--title--container'>
+        <h1>CAD Section</h1>
+    </div>
+     <div id="cadSection" style={{  paddingLeft:"125px",height: '100vh', overflow: 'auto' }}>
+        <img
+          
+            src="/images/chatbox.jpg"
+            width="100%"
+            alt="not found"
+        ></img>
+    </div>
 
-   
 
 
     </>
