@@ -538,7 +538,8 @@ video {
   width: 106%;
   /* padding-left: 100px; */
   display: flex;
-  margin-right: 0;;
+  margin-right: 0;
+  margin-left: -20px;
 }
 
 
