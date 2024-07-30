@@ -11,7 +11,7 @@ function Sidebar() {
                activeClass="sidebar--active-content"
                spy={true}
                smooth={true}
-               offset={-80}
+               offset={-85}
                duration={500}
                to="general"
                className="sidebar--content"
@@ -25,7 +25,7 @@ function Sidebar() {
                activeClass="sidebar--active-content"
                spy={true}
                smooth={true}
-               offset={-80}
+               offset={-85}
                duration={500}
                to="gallery"
                className="sidebar--content"
@@ -46,7 +46,7 @@ function Sidebar() {
                className="sidebar--content"
               
               >
-                Website
+                Web Design
               </Link>
             </li>
             <li>

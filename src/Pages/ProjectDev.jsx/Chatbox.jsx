@@ -29,12 +29,34 @@ function Chatbox() {
             width="100%"
             alt="not found"
         ></img>
+        <img
+          
+          src="/images/gallery2.jpg"
+          width="100%"
+          alt="not found"
+      ></img>
+
+        <div  style={{ height: '100vh',paddingLeft:"40px",paddingRight:"40px", overflow: 'auto' }}>
+            <iframe
+                src="https://drive.google.com/file/d/1J5lnmQRg-M8HMgmwh2gtm3EY1zJqCnhP/preview"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allowFullScreen
+                title="Google Doc"
+            ></iframe>
+        </div>
+      
+     
+    
     </div>
+
 
     <div className='dev--web--title--container'>
         <h1>Website Section</h1>
+      
     </div>
-     <div id="webSection" style={{ height: '100vh', overflow: 'auto' }}>
+     <div id="webSection" style={{ height: '100vh',paddingLeft:"120px", overflow: 'auto' }}>
         <iframe
             src="https://docs.google.com/document/d/1gtvX5dtuveY15gI_K-3lep4ZqNut2jupBJs6-tUvzzo/edit?usp=sharing"
             width="100%"
@@ -51,10 +73,17 @@ function Chatbox() {
      <div id="circuitSection" style={{  paddingLeft:"125px",height: '100vh', overflow: 'auto' }}>
         <img
           
-            src="/images/chatbox.jpg"
+            src="/images/circuitSection.png"
             width="100%"
             alt="not found"
         ></img>
+
+        <img
+          
+          src="/images/circuitSection2.png"
+          width="100%"
+          alt="not found"
+      ></img>
     </div>
 
     <div className='dev--web--title--container'>
