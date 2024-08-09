@@ -275,6 +275,13 @@ video {
   }
 }
 
+@media screen and (max-width: 480px) {
+  
+  .teams--section--container {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .teams--section--card {
   display: flex;
@@ -521,6 +528,13 @@ video {
     grid-template-columns: 4fr 3fr;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .interaction--container{
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 .live--update--container{
