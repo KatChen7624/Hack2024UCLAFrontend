@@ -364,6 +364,12 @@ video {
   max-width: 1120px;
   margin: 0 auto;
 }
+@media screen and (max-width: 480px) {
+  .control--main--container{
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 .control--container{
@@ -405,8 +411,6 @@ video {
 .data-display-box > div{
   display: flex;
   justify-content: center;
- 
-  width: 100%;
  
 }
 
