@@ -52,20 +52,7 @@ function Chatbox() {
     </div>
 
 
-    <div className='dev--web--title--container'>
-        <h1>Website Section</h1>
-      
-    </div>
-     <div id="webSection" style={{ height: '100vh',paddingLeft:"120px", overflow: 'auto' }}>
-        <iframe
-            src="https://docs.google.com/document/d/1gtvX5dtuveY15gI_K-3lep4ZqNut2jupBJs6-tUvzzo/edit?usp=sharing"
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            allowFullScreen
-            title="Google Doc"
-        ></iframe>
-    </div>
+    
 
     <div className='dev--web--title--container'>
         <h1>Pico&&Circuit Section</h1>
@@ -102,6 +89,21 @@ function Chatbox() {
           width="100%"
           alt="not found"
       ></img>
+    </div>
+
+    <div className='dev--web--title--container'>
+        <h1>Website Section</h1>
+      
+    </div>
+     <div id="webSection" style={{ height: '100vh',paddingLeft:"120px", overflow: 'auto' }}>
+        <iframe
+            src="https://docs.google.com/document/d/1gtvX5dtuveY15gI_K-3lep4ZqNut2jupBJs6-tUvzzo/edit?usp=sharing"
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            allowFullScreen
+            title="Google Doc"
+        ></iframe>
     </div>
 
 
