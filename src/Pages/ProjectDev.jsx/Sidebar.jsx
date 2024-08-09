@@ -35,20 +35,7 @@ function Sidebar() {
               </Link>
             </li>
 
-            <li>
-              <Link
-               activeClass="sidebar--active-content"
-               spy={true}
-               smooth={true}
-               offset={-80}
-               duration={500}
-               to="webSection"
-               className="sidebar--content"
-              
-              >
-                Web Design
-              </Link>
-            </li>
+            
             <li>
               <Link
                activeClass="sidebar--active-content"
@@ -77,6 +64,21 @@ function Sidebar() {
               
               >
                 CAD
+              </Link>
+            </li>
+
+            <li>
+              <Link
+               activeClass="sidebar--active-content"
+               spy={true}
+               smooth={true}
+               offset={-80}
+               duration={500}
+               to="webSection"
+               className="sidebar--content"
+              
+              >
+                Web Design
               </Link>
             </li>
           </ul>
