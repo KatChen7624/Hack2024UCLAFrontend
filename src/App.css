@@ -191,6 +191,9 @@ video {
 
   
 @media screen and (max-width: 1200px) {
+
+
+
   .nav__hamburger {
     display: flex;
     z-index: 200;
@@ -262,6 +265,14 @@ video {
   align-items: flex-start;
   gap: 42.6px;
   grid-template-columns: repeat(4, 1fr);
+}
+
+
+@media screen and (max-width: 1200px) {
+  
+  .teams--section--container {
+    grid-template-columns: repeat(2,1fr);
+  }
 }
 
 
@@ -504,6 +515,13 @@ video {
   box-shadow: 0 -2px 0px 0 rgb(112, 107, 107);
 
 }
+
+@media screen and (max-width: 1200px) {
+  .interaction--container{
+    grid-template-columns: 4fr 3fr;
+  }
+}
+
 
 .live--update--container{
   padding: 30px 20px;
