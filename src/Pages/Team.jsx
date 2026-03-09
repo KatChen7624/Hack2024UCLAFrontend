@@ -24,13 +24,9 @@ export default function Team(){
                 {data?.teams?.map((item, index) => (
                     <div key={index} className="teams--section--card">
                         <img src={item.src} alt="team"/>
-                        {/* <div className="teams--section--img">
-                            <img src={item.src} alt="team" />
-                        </div> */}
                         <div className="teams--section--card--content">
                             <h3 className="teams--section--title">{item.name}</h3>
                             <p className="teams--section--major">{item.major}</p>
-                           
                         </div>
                     </div>
                 ))}

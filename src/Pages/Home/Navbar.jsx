@@ -27,11 +27,11 @@ export default function Navbar()
         };
     }, []);
 
-    useEffect(() => {
-        if (window.innerWidth <= 1200) {
-        closeMenu();
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (window.innerWidth <= 1200) {
+    //     closeMenu();
+    //     }
+    // }, []);
 
 
     return (
